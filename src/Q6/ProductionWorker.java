@@ -9,6 +9,13 @@ public class ProductionWorker extends Employee{
     public int getShift() {
         return shift;
     }
+    public String getShiftString(){
+        switch (shift){
+            case 1 : return "day";
+            case 2 : return "night";
+        }
+        return null;
+    }
 
     public void setShift(int shift) {
         if (!isValidShift(shift)){

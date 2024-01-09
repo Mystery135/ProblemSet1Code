@@ -6,14 +6,10 @@ public class Q5 {
         if (y == 0){
             return 0;
         }
-
         if (y > 0){
             y--;
             return x + multiply(x, y);
         }
-            return -multiply(x, -y);
-        //+x * -y is equal to -(-x * +y).
-
-
+            return -multiply(x, -y);        //positive x * negative y is equal to -(negative x * positive y).
     }
 }
