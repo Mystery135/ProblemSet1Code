@@ -10,11 +10,11 @@ public class ProductionWorker extends Employee{
         return shift;
     }
     public String getShiftString(){
-        switch (shift){
-            case 1 : return "day";
-            case 2 : return "night";
-        }
-        return null;
+        return switch (shift) {
+            case 1 -> "day";
+            case 2 -> "night";
+            default -> null;
+        };
     }
 
     public void setShift(int shift) {
@@ -33,7 +33,6 @@ public class ProductionWorker extends Employee{
     }
     private boolean isValidShift(int i){
             return i == 1 || i == 2;
-
     }
     public ProductionWorker(String name, String employeeNumber, Calendar hireDate, int shift, double hourlyPayRate) {
         super(name, employeeNumber, hireDate);
