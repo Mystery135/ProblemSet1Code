@@ -3,9 +3,9 @@ public class Q4 {
         stringPrinter("Hello world!");
     }
     public static void stringPrinter(String s) {
-        if (s.isEmpty()){return;}
-        System.out.println(s.charAt(0));
-        s = s.substring(1);
-        stringPrinter(s);
+        if (s.isEmpty()){return;}//Returns if there is nothing left
+        System.out.println(s.charAt(0));//Prints the first character of s
+        s = s.substring(1);//Makes a new string without the first character
+        stringPrinter(s);//calls itself
     }
 }
